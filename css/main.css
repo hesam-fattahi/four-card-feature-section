@@ -85,6 +85,9 @@ p {
 .header__heading span {
   font-weight: 200;
 }
+.header__paragraph {
+  color: hsl(229deg, 6%, 66%);
+}
 
 .features {
   display: grid;
@@ -117,6 +120,7 @@ p {
   font-size: 200;
   font-size: 0.875rem;
   margin-bottom: 2rem;
+  color: hsl(229deg, 6%, 66%);
 }
 .features__icon {
   width: 3.5rem;

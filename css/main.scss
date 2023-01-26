@@ -36,6 +36,10 @@ p {
       font-weight: 200;
     }
   }
+
+  &__paragraph {
+    color: $color-blue--grayish;
+  }
 }
 
 .features {
@@ -72,6 +76,7 @@ p {
     font-size: 200;
     font-size: 0.875rem;
     margin-bottom: 2rem;
+    color: $color-blue--grayish;
   }
 
   &__icon {
