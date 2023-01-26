@@ -78,15 +78,22 @@ p {
 }
 .header__heading {
   font-size: clamp(1.5rem, 1.057rem + 1.863vw, 2.25rem);
-  font-weight: 600;
+  font-weight: 200;
   line-height: 1.4;
   margin-bottom: 1.25rem;
+  -webkit-animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .header__heading span {
-  font-weight: 200;
+  font-weight: 600;
+  -webkit-animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .header__paragraph {
   color: hsl(229deg, 6%, 66%);
+  -webkit-animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .features {
@@ -102,15 +109,23 @@ p {
 }
 .features__item--supervisor {
   border-top: 5px solid #45d3d3;
+  -webkit-animation: fadeInRight 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: fadeInRight 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .features__item--team-builder {
   border-top: 5px solid #ea5353;
+  -webkit-animation: fadeInRight 1s 0.15s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: fadeInRight 1s 0.15s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .features__item--karma {
   border-top: 5px solid #fcaf4a;
+  -webkit-animation: fadeInRight 1s 0.3s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: fadeInRight 1s 0.3s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .features__item--calculator {
   border-top: 5px solid #549ef2;
+  -webkit-animation: fadeInRight 1s 0.45s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: fadeInRight 1s 0.45s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .features__heading {
   font-size: 1.25rem;
@@ -152,5 +167,45 @@ p {
   }
   .features__paragraph {
     margin-bottom: 3rem;
+  }
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=main.css.map */

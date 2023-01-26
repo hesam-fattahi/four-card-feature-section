@@ -4,6 +4,10 @@ $color-blue--dark: hsl(234, 12%, 34%);
 $color-blue--grayish: hsl(229, 6%, 66%);
 $color-gray: hsl(0, 0%, 98%);
 
+@mixin animate-fadeIn($animation-name, $delay) {
+  animation: $animation-name 1s $delay cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: $color-gray;
@@ -20,6 +24,9 @@ p {
   padding: 5.125rem 1.875rem;
 }
 
+///////////////////////////////////////////////
+////////////////////////////////////// Header
+
 .header {
   max-width: 532px;
   margin: 0 auto;
@@ -28,19 +35,26 @@ p {
 
   &__heading {
     font-size: clamp(1.5rem, 1.057rem + 1.863vw, 2.25rem);
-    font-weight: 600;
+    font-weight: 200;
     line-height: 1.4;
     margin-bottom: 1.25rem;
+    animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    @include animate-fadeIn(fadeInDown, 0s);
 
     span {
-      font-weight: 200;
+      font-weight: 600;
+      @include animate-fadeIn(fadeInDown, 0s);
     }
   }
 
   &__paragraph {
     color: $color-blue--grayish;
+    @include animate-fadeIn(fadeInDown, 0s);
   }
 }
+
+///////////////////////////////////////////////
+///////////////////////////////////// Features
 
 .features {
   display: grid;
@@ -55,15 +69,19 @@ p {
 
     &--supervisor {
       border-top: 5px solid #45d3d3;
+      @include animate-fadeIn(fadeInRight, 0s);
     }
     &--team-builder {
       border-top: 5px solid #ea5353;
+      @include animate-fadeIn(fadeInRight, 0.15s);
     }
     &--karma {
       border-top: 5px solid #fcaf4a;
+      @include animate-fadeIn(fadeInRight, 0.3s);
     }
     &--calculator {
       border-top: 5px solid #549ef2;
+      @include animate-fadeIn(fadeInRight, 0.45s);
     }
   }
 
@@ -84,6 +102,9 @@ p {
     margin-left: auto;
   }
 }
+
+///////////////////////////////////////////////
+//////////////////////// Media query - Desktop
 
 @media (min-width: 56.5em) {
   .header {
@@ -115,5 +136,30 @@ p {
     &__paragraph {
       margin-bottom: 3rem;
     }
+  }
+}
+
+///////////////////////////////////////////////
+//////////////////////////////////// Keyframes
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
