@@ -10,7 +10,8 @@ $color-gray: hsl(0, 0%, 98%);
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: $color-gray;
+  // background-color: $color-gray;
+  background-color: $color-blue--dark;
 }
 
 p {
@@ -20,7 +21,8 @@ p {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  color: $color-blue--dark;
+  // color: $color-blue--dark;
+  color: $color-gray;
   padding: 5.125rem 1.875rem;
 }
 
@@ -38,7 +40,6 @@ p {
     font-weight: 200;
     line-height: 1.4;
     margin-bottom: 1.25rem;
-    animation: fadeInDown 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     @include animate-fadeIn(fadeInDown, 0s);
 
     span {
@@ -62,6 +63,7 @@ p {
   gap: 1.875rem;
 
   &__item {
+    background-color: rgba($color-blue--grayish, 0.1);
     padding: 1.625rem 1.875rem;
     width: 100%;
     border-radius: 0.5rem;
