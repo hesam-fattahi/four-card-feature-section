@@ -10,8 +10,7 @@ $color-gray: hsl(0, 0%, 98%);
 
 body {
   font-family: "Poppins", sans-serif;
-  // background-color: $color-gray;
-  background-color: $color-blue--dark;
+  background-color: $color-gray;
 }
 
 p {
@@ -21,8 +20,7 @@ p {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  // color: $color-blue--dark;
-  color: $color-gray;
+  color: $color-blue--dark;
   padding: 5.125rem 1.875rem;
 }
 
